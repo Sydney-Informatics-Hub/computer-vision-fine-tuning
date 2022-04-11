@@ -1,5 +1,5 @@
 # Computer Vision Fine Tuning
-Fine tune a computer vision model to solve your task locally, on HPC, or in the cloud!
+Fine tune a computer vision model to solve your task locally, on HPC, in a container, or in the cloud!
 
 ## Computer Vision Tasks
 
@@ -73,7 +73,10 @@ pip install -r requirements.txt
 
 ### Docker
 
-Recommended OS: Ubuntu/Debian (native or via WSL2)
+Recommended OS: Ubuntu/Debian (native or via WSL2).
+This assumes you are using a device with CUDA.
+
+Documentation: [Nvidia Docker](https://github.com/ultralytics/yolov5/wiki/Docker-Quickstart) and [YOLOv5](https://github.com/ultralytics/yolov5/wiki/Docker-Quickstart).
 
 1. Update your NVIDIA drivers.
 
