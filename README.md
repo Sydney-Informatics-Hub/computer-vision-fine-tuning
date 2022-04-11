@@ -3,10 +3,10 @@ Fine tune a computer vision model to solve your task locally, on HPC, in a conta
 
 ## Computer Vision Tasks
 
-**1. Classification:** Classify what the image is.  The simplest task.
-**2. Object Detection:** Detect and classify objects in images, using bounding boxes. 
-**3. Segmentation:** Detect and classify objects in images, using segmentation masks.
-**4. Panoptic Segmentation:** Detect and classify everything in an image, using segmentation masks for the whole image. The hardest class!
+1. **Classification:** Classify what the image is.  The simplest task.
+2. **Object Detection:** Detect and classify objects in images, using bounding boxes. 
+3. **Segmentation:** Detect and classify objects in images, using segmentation masks.
+4. **Panoptic Segmentation:** Detect and classify everything in an image, using segmentation masks for the whole image. The hardest class!
 
 ## Picking Your Model
 
