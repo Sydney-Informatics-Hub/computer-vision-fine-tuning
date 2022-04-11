@@ -12,9 +12,9 @@ Fine tune a computer vision model to solve your task locally, on HPC, in a conta
 
 There are three leading models for computer vision at the moment:
 
-1. Residual Neural Networks (ResNets)
-2. You Only Look Once (YOLOs)
-3. Vision Transformers (ViT)
+1. Residual Neural Networks (ResNet)
+2. You Only Look Once ([YOLO](https://pjreddie.com/darknet/yolo/))
+3. Vision Transformers ([ViT](https://github.com/lucidrains/vit-pytorch#vision-transformer---pytorch))
 
 ResNets and YOLOs are both based on convolutional neural networks. ViT models apply transformer model architecture. 
 
