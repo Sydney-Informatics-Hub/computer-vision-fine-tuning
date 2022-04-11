@@ -73,7 +73,59 @@ pip install -r requirements.txt
 
 ### Docker
 
-TODO
+Recommended OS: Ubuntu/Debian (native or via WSL2)
+
+1. Update your NVIDIA drivers.
+
+2. Set up Docker
+
+```bash
+curl https://get.docker.com | sh \
+  && sudo systemctl --now enable docker
+```
+3. Set up Nvidia Container Toolkit
+
+```bash
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
+      && curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+      && curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.list | \
+            sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+            sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+```
+
+Install `nvidia-docker2`
+
+```bash
+suda apt-get update
+
+sudo apt-get install -y nvidia-docker2
+```
+
+Restart docker
+
+```bash
+sudo systemctl restart docker
+```
+
+Test if the installation worked
+
+```bash
+sudo docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
+```
+
+4. Set up YOLO
+
+```bash
+sudo docker pull ultralytics/yolov5:latest
+```
+
+Run the container, giving it access to your GPU(s). You can also mount local files with `-v "$(pwd)"/datasets:/usr/src/datasets`.
+
+```bash
+sudo docker run --ipc=host -it --gpus all ultralytics/yolov5:latest
+```
+
+Once the container is up and running and you have your data mounted, you can then use all the YOLOv5 functions as normal.
 
 ### HPC 
 
