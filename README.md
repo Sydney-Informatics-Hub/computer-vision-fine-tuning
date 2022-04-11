@@ -21,6 +21,26 @@ Tools for making annotations:
 
 TODO
 
+### Locally
+
+On MacOS/Linux
+```bash
+conda create -n finetune python=3.9
+
+conda activate finetune
+
+pip install -r requirements.txt
+```
+
+On Windows
+```powershell
+conda create -n finetune python=3.9
+
+conda activate finetune
+
+pip install -r requirements.txt
+```
+
 ### Weights and Biases Logging
 
 Use weights and biases for data logging and model pipeline version control.
