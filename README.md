@@ -39,7 +39,7 @@ Tools for making annotations:
 - [roboflow](https://roboflow.com/): Pros: industry standard, well integrated with other platforms, scalable. Cons: you have to upload your data and it won't be private.
 - CVAT
 
-## Setup and install
+## Environments
 
 TODO
 
@@ -71,6 +71,21 @@ conda activate finetune
 pip install -r requirements.txt
 ```
 
+### Docker
+
+TODO
+
+### HPC 
+
+TODO
+
+### Google Colab
+
+Google Colab provides 12 hours a day of GPU node compute per day on the free tier; this represents one of the easiest ways to get access to low cost compute.
+One major drawback is the hard 12 hour limit; you could potentially try to avoid this by running epochs in batchs and exporting checkpoints as you go. 
+
+## Data Logging
+
 ### Weights and Biases Logging
 
 Use weights and biases for data logging and model pipeline version control.
@@ -78,11 +93,6 @@ Use weights and biases for data logging and model pipeline version control.
 ### Grid
 
 TODO: Show how to set up Grid project for this.
-
-### Google Colab
-
-Google Colab provides 12 hours a day of GPU node compute per day on the free tier; this represents one of the easiest ways to get access to low cost compute.
-One major drawback is the hard 12 hour limit; you could potentially try to avoid this by running epochs in batchs and exporting checkpoints as you go. 
 
 ## Camera Traps Object Detection
 
