@@ -124,6 +124,7 @@ sudo docker pull ultralytics/yolov5:latest
 ```
 
 Run the container, giving it access to your GPU(s). 
+
 You can also mount local files with `-v "$(pwd)"/datasets:/usr/src/datasets`.
 
 ```bash
