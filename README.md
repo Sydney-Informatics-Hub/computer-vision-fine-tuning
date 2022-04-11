@@ -1,5 +1,20 @@
 # computer-vision-fine-tuning
-Fine tune a computer vision to solve your task locally, on HPC, or in the cloud!
+Fine tune a computer vision model to solve your task locally, on HPC, or in the cloud!
+
+## Picking Your Model
+
+There are three leading models for computer vision at the moment:
+
+1. Residual Neural Networks (ResNets)
+2. You Only Look Once (YOLOs)
+3. Vision Transformers (ViT)
+
+ResNets and YOLOs are both based on convolutional neural networks. ViT models apply transformer model architecture. 
+
+Currently, ResNets and YOLOs are the easiest to work with and the most broadly supported. They also can be fine tuned or even trained on surprisingly small datasets.
+On the other hand, ViT models require enormous sums of data for fine tuning. 
+In this repository, I will first focus on demonstrating workflows for using ResNet and YOLO architectures.
+YOLO models often excel in terms of inference / prediction speed, which is very attractive when considering possible production or deployment scenarios where computational resources may be at a premium or speed is a requirement.
 
 ## Data Preperation
 
