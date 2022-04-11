@@ -40,11 +40,11 @@ Tools for making annotations:
 - [roboflow](https://roboflow.com/): Pros: industry standard, well integrated with other platforms, scalable. Cons: you have to upload your data and it won't be private.
 - CVAT
 
-## Environments
+# Environments
 
 TODO
 
-### Locally
+## Locally
 
 You will need a device with a CUDA GPU. 
 
@@ -72,7 +72,7 @@ conda activate finetune
 pip install -r requirements.txt
 ```
 
-### Docker
+## Docker
 
 Recommended OS: Ubuntu/Debian (native or via WSL2).
 This assumes you are using a device with CUDA.
@@ -133,11 +133,11 @@ sudo docker run --ipc=host -it --gpus all ultralytics/yolov5:latest
 
 Once the container is up and running and you have your data mounted, you can then use all the YOLOv5 functions as normal.
 
-### HPC 
+## HPC 
 
 TODO
 
-### Google Colab
+## Google Colab
 
 Google Colab provides 12 hours a day of GPU node compute per day on the free tier; this represents one of the easiest ways to get access to low cost compute.
 
@@ -145,15 +145,17 @@ There are two major drawbacks of Google Colab:
 1. You have a maximum of 12 hours on the free tier.
 2. You must have your computer open and running.
 
-## Data Logging
+# Data Logging
 
-### Weights and Biases Logging
+## Weights and Biases Logging
 
 Use weights and biases for data logging and model pipeline version control.
 
-### Grid
+## Grid
 
 TODO: Show how to set up Grid project for this.
+
+# Examples
 
 ## Camera Traps Object Detection
 
