@@ -28,8 +28,8 @@ Some general advice:
 
 Tools for making annotations:
 
-- [makesense](https://www.makesense.ai/)
-- [roboflow](https://roboflow.com/)
+- [makesense](https://www.makesense.ai/): Pros: free, can keep your data private, built in COCO object detection. Cons: Less robust ecosystem, limited scalability.
+- [roboflow](https://roboflow.com/): Pros: industry standard, well integrated with other platforms, scalable. Cons: you have to upload your data and it won't be private.
 - CVAT
 
 ## Setup and install
