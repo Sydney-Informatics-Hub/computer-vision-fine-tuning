@@ -123,7 +123,8 @@ sudo docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 sudo docker pull ultralytics/yolov5:latest
 ```
 
-Run the container, giving it access to your GPU(s). You can also mount local files with `-v "$(pwd)"/datasets:/usr/src/datasets`.
+Run the container, giving it access to your GPU(s). 
+You can also mount local files with `-v "$(pwd)"/datasets:/usr/src/datasets`.
 
 ```bash
 sudo docker run --ipc=host -it --gpus all ultralytics/yolov5:latest
