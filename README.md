@@ -140,7 +140,10 @@ TODO
 ### Google Colab
 
 Google Colab provides 12 hours a day of GPU node compute per day on the free tier; this represents one of the easiest ways to get access to low cost compute.
-One major drawback is the hard 12 hour limit; you could potentially try to avoid this by running epochs in batchs and exporting checkpoints as you go. 
+
+There are two major drawbacks of Google Colab:
+1. You have a maximum of 12 hours on the free tier.
+2. You must have your computer open and running.
 
 ## Data Logging
 
