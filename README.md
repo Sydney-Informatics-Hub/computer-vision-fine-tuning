@@ -159,6 +159,18 @@ TODO: Show how to set up Grid project for this.
 
 ## Camera Traps Object Detection
 
+### Context 
+
+Camera traps are used to capture images of wildlife, with many applications in conservation biology and ecology. 
+The New South Wales National Parks Service has been running a long term wildlife monitoring program called [Wildcount](https://www.environment.nsw.gov.au/-/media/OEH/Corporate-Site/Documents/Animals-and-plants/Native-animals/wildcount-broad-scale-long-term-monitoring-of-fauna-in-nsw-national-parks-2012-2016-200316.pdf). For this program they collected millions of images over several years from sites all over New South Wales, and recorded the species of animals found in these images.
+
+The original data format is a series of directories structured like:
+
+`year/set_of_10_sites/site/subsite`
+
+Each of the final subsite folders contains all of the images captured for that location.
+
+
 Notebook on [colab](https://colab.research.google.com/drive/1Q2zV7kYRHT_j630_fKyF08eYEaob-N2e?usp=sharing).
 
 
