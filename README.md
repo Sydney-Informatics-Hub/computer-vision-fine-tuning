@@ -170,6 +170,7 @@ The original data format is a series of directories structured like:
 
 Each of the final subsite folders contains all of the images captured for that location.
 
+### Google Colab
 
 Notebook on [colab](https://colab.research.google.com/drive/1Q2zV7kYRHT_j630_fKyF08eYEaob-N2e?usp=sharing).
 
