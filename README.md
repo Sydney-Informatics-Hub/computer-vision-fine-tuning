@@ -49,7 +49,7 @@ While you can use CPUs for deep learning, you really should only use devices wit
 For a local device, a good build would be:
 
 - OS: Windows 11+WSL2 or Ubuntu (e.g. [Lambda Stack](https://lambdalabs.com/lambda-stack-deep-learning-software))
-- GPU: RTX 2080ti or better
+- GPU: RTX 3080 or better
 - RAM: 64gb or more
 - SSD: biggest NVME you can afford
 - CPU: Fast Intel i9 or AMD threadripper
@@ -69,9 +69,11 @@ You will need a device with a CUDA GPU.
 Current testing has been on a desktop with:
 - OS: Windows 10
 - GPU: RTX 2070 Super 8gb vRAM
-- RAM: 16gb 
+- RAM: 16gb DDR5
 - CPU: Ryzen 7 5800x 3.8Ghz 8-core
 - SSD: 1tb NVME
+
+This desktop is approximately 2x faster than a GCP Tesla k80 VM.
 
 On MacOS/Linux
 ```bash
