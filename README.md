@@ -42,7 +42,25 @@ Tools for making annotations:
 
 # Environments
 
-TODO
+### Technical Requirements
+
+While you can use CPUs for deep learning, you really should only use devices with CUDA capable GPUs.
+
+For a local device, a good build would be:
+
+- OS: Windows 11+WSL2 or Ubuntu (e.g. [Lambda Stack](https://lambdalabs.com/lambda-stack-deep-learning-software))
+- GPU: RTX 2080ti or better
+- RAM: 64gb or more
+- SSD: biggest NVME you can afford
+- CPU: Fast Intel i9 or AMD threadripper
+
+The main priority is to have a very powerful GPU with a lot of CUDA cores and a large amount of fast vRAM. Your GPU's speed and size will determine the speed and complexity of the models that you can train, and will also control the batch size that you can work with.
+
+You also will want to have a decent amount of fast RAM. RAM is very important for high throughput I/O operations, such as when your model is referencing numerous images and annotations. Many models also allow you to cache your images and annotations on RAM to accelerate training/fine tuning.
+
+A large and fast SSD (e.g. NVME) can be a huge benefit, allowing faster I/O processes and supporting a high speed paging file if you do not have sufficient RAM. Caching on a fast SSD can also be a decent alternative if your RAM is not sufficient for caching your data.
+
+For CPUs, our primary spec to target is 
 
 ## Locally
 
@@ -53,6 +71,7 @@ Current testing has been on a desktop with:
 - GPU: RTX 2070 Super 8gb vRAM
 - RAM: 16gb 
 - CPU: Ryzen 7 5800x 3.8Ghz 8-core
+- SSD: 1tb NVME
 
 On MacOS/Linux
 ```bash
