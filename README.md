@@ -1,6 +1,24 @@
 # Computer Vision Fine Tuning
 Fine tune a computer vision model to solve your task locally, on HPC, in a container, or in the cloud!
 
+### Table of Contents
+  * [Core Concepts](#core-concepts)
+    + [Computer Vision Tasks](#computer-vision-tasks)
+    + [Picking Your Model](#picking-your-model)
+    + [Data Preperation](#data-preperation)
+    + [Model Parameters](#model-parameters)
+  * [Environments](#environments)
+    + [Technical Requirements](#technical-requirements)
+    + [Locally](#locally)
+    + [Docker](#docker)
+    + [HPC](#hpc)
+    + [Google Colab](#google-colab)
+  * [Examples](#examples)
+    + [Camera Traps](#camera-traps)
+    + [Weed-AI](#weed-ai)
+
+# Core Concepts
+
 ## Computer Vision Tasks
 
 1. **Classification:** Classify what the image is.  The simplest task.
@@ -183,7 +201,9 @@ TODO: Show how to set up Grid project for this.
 
 # Examples
 
-## Camera Traps Object Detection using YOLO
+## Camera Traps 
+
+**Object Detection using YOLO**
 
 ### Context 
 
