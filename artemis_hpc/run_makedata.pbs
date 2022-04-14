@@ -1,0 +1,81 @@
+#!/bin/bash
+
+# PBS Script for building Yolov5s data 
+#PBS -P SIHsandbox 
+#PBS -N builddata
+# #PBS -M nathaniel.butterworth@sydney.edu.au 
+# #PBS -m abe
+#PBS -l select=1:ncpus=2:mem=8gb
+#PBS -l walltime=2:10:00
+#PBS -q defaultQ
+
+cd $PBS_O_WORKDIR
+
+mkdir -p train/images train/labels
+mkdir -p val/images val/labels
+mkdir -p test/images test/labels
+
+echo "make val"
+#Output the annotations into approriate format
+while IFS= read -r line; 
+do f2=`echo $line | cut -d ',' -f 2`; 
+#echo $f2;  
+c1=`echo $line | cut -d ',' -f 3`;  
+x1=`echo $line | cut -d ',' -f 4`;  
+y1=`echo $line | cut -d ',' -f 5`;  
+w1=`echo $line | cut -d ',' -f 6`;  
+h1=`echo $line | cut -d ',' -f 7`; 
+echo "${c1} ${x1} ${y1} ${w1} ${h1}" > val/labels/${f2%.jpg}.txt; 
+done < yolo_val.txt
+
+echo "make val files"
+#Copy the data into approirate dirs
+while IFS= read -r line; 
+do f1=`echo $line | cut -d ',' -f 1`; 
+f2=`echo $line | cut -d ',' -f 2`; 
+cp -v "${f1}" val/images/${f2}; 
+done < yolo_val.txt
+
+
+echo "make train"
+#Output the annotations into approriate format
+while IFS= read -r line; 
+do f2=`echo $line | cut -d ',' -f 2`; 
+#echo $f2;  
+c1=`echo $line | cut -d ',' -f 3`;  
+x1=`echo $line | cut -d ',' -f 4`;  
+y1=`echo $line | cut -d ',' -f 5`;  
+w1=`echo $line | cut -d ',' -f 6`;  
+h1=`echo $line | cut -d ',' -f 7`; 
+echo "${c1} ${x1} ${y1} ${w1} ${h1}" > train/labels/${f2%.jpg}.txt; 
+done < yolo_train.txt
+
+echo "make train files"
+#Copy the data into approirate dirs
+while IFS= read -r line; 
+do f1=`echo $line | cut -d ',' -f 1`; 
+f2=`echo $line | cut -d ',' -f 2`; 
+cp -v "${f1}" train/images/${f2}; 
+done < yolo_train.txt
+
+
+echo "make test"
+#Output the annotations into approriate format
+while IFS= read -r line; 
+do f2=`echo $line | cut -d ',' -f 2`; 
+#echo $f2;  
+c1=`echo $line | cut -d ',' -f 3`;  
+x1=`echo $line | cut -d ',' -f 4`;  
+y1=`echo $line | cut -d ',' -f 5`;  
+w1=`echo $line | cut -d ',' -f 6`;  
+h1=`echo $line | cut -d ',' -f 7`; 
+echo "${c1} ${x1} ${y1} ${w1} ${h1}" > test/labels/${f2%.jpg}.txt; 
+done < yolo_test.txt
+
+echo "make test files"
+#Copy the data into approirate dirs
+while IFS= read -r line; 
+do f1=`echo $line | cut -d ',' -f 1`; 
+f2=`echo $line | cut -d ',' -f 2`; 
+cp -v "${f1}" test/images/${f2}; 
+done < yolo_test.txt
