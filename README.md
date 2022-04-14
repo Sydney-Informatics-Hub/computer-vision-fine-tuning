@@ -83,7 +83,7 @@ You also will want to have a decent amount of fast RAM. RAM is very important fo
 
 A large and fast SSD (e.g. NVME) can be a huge benefit, allowing faster I/O processes and supporting a high speed paging file if you do not have sufficient RAM. Caching on a fast SSD can also be a decent alternative if your RAM is not sufficient for caching your data.
 
-For CPUs, our primary spec to target is 
+For CPUs, something with 4+ cores is usually good, plus spec for sufficient gates to support PCIE GPU + PCIE NVME drive.
 
 ## Locally
 
