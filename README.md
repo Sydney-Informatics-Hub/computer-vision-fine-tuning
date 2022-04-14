@@ -183,7 +183,7 @@ TODO: Show how to set up Grid project for this.
 
 # Examples
 
-## Camera Traps Object Detection
+## Camera Traps Object Detection using YOLO
 
 ### Context 
 
