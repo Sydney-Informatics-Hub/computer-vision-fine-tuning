@@ -33,12 +33,17 @@ Some general advice:
 - When collecting a dataset of images, work to make sure that your training data contains the same sort of variability that you would see in a deployment scenario. You want to make sure that your model is exposed to a diverse set of images that show your objects in a variety of different positions and sizes in the frame, on a wide variety of backgrounds.
 - Try to have balanced classes. 1000 images per class is a great starting point.
 - Include blank or "null" images, so that your model can get better at understanding what the background is.
+- Objects which take up a larger amount of the image are easier than objects that smaller. 
 
 Tools for making annotations:
 
 - [makesense](https://www.makesense.ai/): Pros: free, can keep your data private, built in COCO object detection. Cons: Less robust ecosystem, limited scalability.
 - [roboflow](https://roboflow.com/): Pros: industry standard, well integrated with other platforms, scalable. Cons: you have to upload your data and it won't be private.
-- CVAT
+- [CVAT](https://github.com/openvinotoolkit/cvat)
+
+## Model Parameters
+
+- **Epochs:** Anywhere from 100 to 300 epochs is a good starting point. Generally it takes a decent number of epochs for a model to start to perform anywhere near well.
 
 # Environments
 
